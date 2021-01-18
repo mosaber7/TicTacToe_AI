@@ -248,8 +248,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="currentStateLabel" destination="6GU-xe-KhE" id="eP1-fF-75Z"/>
                         <outlet property="oScoreLabel" destination="1XP-O5-cH7" id="o2a-RE-jj9"/>
-                        <outlet property="winingLabel" destination="6GU-xe-KhE" id="eP1-fF-75Z"/>
                         <outlet property="xScoreLabel" destination="Wz9-Eq-xLh" id="azR-Ft-kVV"/>
                     </connections>
                 </viewController>

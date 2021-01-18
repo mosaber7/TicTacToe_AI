@@ -7,19 +7,19 @@
 
 import Foundation
 
-enum curenntState{
+enum player{
     case X
     case O
     case E //Empty
     
-    var opposite: curenntState{
+    var opposite: player{
         switch self {
         case .X:
             return .O
         case .O:
             return .X
         default:
-            return .E
+            return .E //Empty
         }
     }
 }
@@ -27,8 +27,8 @@ enum curenntState{
 struct TicTacToe {
     
    
-    var positions: [curenntState]
-    var turn : curenntState
+    var positions: [player]
+    var turn : player
     
     
     var isWin: Bool{
@@ -58,7 +58,9 @@ struct TicTacToe {
         self.positions = [.E, .E, .E,
                           .E, .E, .E,
                           .E, .E, .E]
-        self.turn = curenntState.X
+        
+        // X begins the game
+        self.turn = player.X
     }
     
     func updateScore(_ xScore: inout Int,_ oScore: inout Int, _ wining: inout String){
